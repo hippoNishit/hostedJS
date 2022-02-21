@@ -26,7 +26,10 @@ for(var j = 0; j < frames.length; j++)
             eventData = JSON.parse(e.data);
             console.log("eventData:", eventData);
         }
-        if (eventData && eventData.type == 'video_delivery_view_loaded') initiateHippoVideo();
+        if (eventData && eventData.type == 'video_delivery_view_loaded'){
+            console.log("Got vdv loaded event!!");
+            initiateHippoVideo();
+        }
     });
 }
 function getCookie(name) 
