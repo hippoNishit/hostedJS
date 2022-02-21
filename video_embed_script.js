@@ -20,8 +20,8 @@ for(var j = 0; j < frames.length; j++)
     frames[j].addEventListener("load",initiateHippoVideo);
     window.addEventListener("message", (e) => {
         console.log("video_embed_script message received:", e);
-        e.stopPropagation();;
-        var eventData
+        e.stopPropagation();
+        var eventData;
         if(e.data){
             eventData = JSON.parse(e.data);
             console.log("eventData:", eventData);
