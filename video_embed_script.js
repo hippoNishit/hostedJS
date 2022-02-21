@@ -49,7 +49,9 @@ function initiateHippoVideo()
         {
             if(!(frames[j].outerHTML.indexOf('first_name') != -1 && frames[0].outerHTML.indexOf('email') != -1 ))
             {
-                if(document.getElementById("hv_video_delivery_embed") && document.getElementById("hv_video_delivery_embed").dataset.embed_type === "hubspot") {
+                if(document.getElementById("hv_video_delivery_embed") && document.getElementById("hv_video_delivery_embed").getAttribute("embed_type")
+ === "hubspot") {
+//                 if(document.getElementById("hv_video_delivery_embed") && document.getElementById("hv_video_delivery_embed").dataset.embed_type === "hubspot") {     
                     frames[j].contentWindow.postMessage(json, '*');
                 }
                 frames[j].removeEventListener("load",initiateHippoVideo);
